@@ -2,7 +2,9 @@
 
 ## configurations
 First clone this project:
+```
 git clone https://github.com/ericwtlin/ssr.git
+```
 
 Similar to config_sample.json, you need to make configurations for your ShadowsocksR and save the configurations file as config.json
 
