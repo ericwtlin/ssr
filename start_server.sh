@@ -1,10 +1,13 @@
 #!/bin/bash
 
 count=`ps -ef |grep "shadowsocks/server.py" |grep -v "grep" |wc -l`
-if [ $count -eq 0 ] 
+if [ $count -gt 0 ] 
 then
     # automatically kill the existing server.py
-    sudo kill `ps -ef | grep "shadowsocks/server.py" | grep -v "grep" | awk "{print $2}"`
+    for pid in $(ps -ef | grep "shadowsocks/server.py" | grep -v "grep" | awk '{print $2}'); do
+	echo "Kill $pid"
+        sudo kill $pid
+    done
     echo "The existing server.py has been killed. Restart now."
 fi
 
