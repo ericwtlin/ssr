@@ -1,4 +1,4 @@
-
+#!/bin/bash
 count=`ps -ef |grep "shadowsocks/local.py" |grep -v "grep" |wc -l`
 if [ $count -eq 0 ] 
 then
