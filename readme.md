@@ -1,10 +1,9 @@
 # ShadowsocksR and automatical configurations
 
-## ShadowsocksR
-./ShadowsocksR is downloaded from https://github.com/shadowsocksrr/shadowsocksr
-
-
 ## configurations
+First clone this project:
+git clone https://github.com/ericwtlin/ssr.git
+
 Similar to config_sample.json, you need to make configurations for your ShadowsocksR and save the configurations file as config.json
 
 
@@ -40,3 +39,6 @@ If you want to start the ShadowsocksR when your system start up, please make the
 bash /your_absolute_path_to_ssr/start_server.sh /your_absolute_path_to_ssr/config.json
 ```
 
+
+## Reference
+./ShadowsocksR is downloaded from https://github.com/shadowsocksrr/shadowsocksr
