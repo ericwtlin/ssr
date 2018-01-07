@@ -1,7 +1,14 @@
-#sudo -u nobody /home/eric-lin/software/shadowsocks-go/shadowsocks-local-linux64-1.1.4 -c /home/eric-lin/software/shadowsocks-go/config.json
+
+count=`ps -ef |grep "shadowsocks/local.py" |grep -v "grep" |wc -l`
+if [ $count -eq 0 ] 
+then
+    # automatically kill the existing local.py
+    kill `ps -ef | grep "shadowsocks/local.py" | grep -v "grep" | awk "{print $2}"`
+fi
+
 if [ $# -eq 0 ]
 then
-    sudo -u nobody python ./shadowsocksR/shadowsocks/local.py -c ./config.json >/dev/null 2>&1 &
+    nohup python ./shadowsocksR/shadowsocks/local.py -c ./config.json >/dev/null 2>&1 &
 else
-    sudo -u nobody python ./shadowsocksR/shadowsocks/local.py -c $1 >/dev/null 2>&1 &
+    nohup python ./shadowsocksR/shadowsocks/local.py -c $1 >/dev/null 2>&1 &
 fi  
