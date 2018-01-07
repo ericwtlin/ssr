@@ -5,17 +5,17 @@ First clone this project:
 ```
 git clone https://github.com/ericwtlin/ssr.git
 ```
-
 Similar to config_sample.json, you need to make configurations for your ShadowsocksR and save the configurations file as config.json
-
 
 ## Running as a client
 
 ### Windows and Android
-There are GUI clients for Windows and Android. Please refer to: https://dcamero.azurewebsites.net/shadowsocksr.html#linux
+There are GUI clients for Windows and Android. Please refer to: https://dcamero.azurewebsites.net/shadowsocksr.html
 
 
-### Automatical shell scripts for Linux and Mac users
+### Linux and Mac
+In consideration of no GUI clients available, I offer two shell scripts to automatically run ShadowsocksR.
+
 Excuting the following command:
 ```
 bash local.sh
