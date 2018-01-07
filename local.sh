@@ -4,6 +4,7 @@ if [ $count -eq 0 ]
 then
     # automatically kill the existing local.py
     kill `ps -ef | grep "shadowsocks/local.py" | grep -v "grep" | awk "{print $2}"`
+    echo "The existing server.py has been killed. Restart now."
 fi
 
 if [ $# -eq 0 ]
@@ -12,3 +13,4 @@ then
 else
     nohup python ./shadowsocksR/shadowsocks/local.py -c $1 >/dev/null 2>&1 &
 fi  
+echo "ShadowsocksR started."
