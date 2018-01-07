@@ -9,11 +9,15 @@ Similar to config_sample.json, you need to make configurations for your Shadowso
 
 ## Running as a client
 
-### Windows and Android
-There are GUI clients for Windows and Android. Please refer to: https://dcamero.azurewebsites.net/shadowsocksr.html
+### Windows
+There are GUI clients for Windows. Please refer to: https://dcamero.azurewebsites.net/shadowsocksr.html
 
 
-### Linux and Mac
+### Mac
+You can download GUI client for Mac OS from:
+https://github.com/qinyuhang/ShadowsocksX-NG-R/releases
+
+### Linux (and Mac OS)
 In consideration of no GUI clients available, I offer two shell scripts to automatically run ShadowsocksR.
 
 Excuting the following command:
