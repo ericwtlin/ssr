@@ -1,4 +1,4 @@
-# ShadowsocksR and aumatical configurations
+# ShadowsocksR and automatical configurations
 
 ## ShadowsocksR
 ./ShadowsocksR is downloaded from https://github.com/shadowsocksrr/shadowsocksr
