@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd `dirname $0`
+
 count=`ps -ef |grep "shadowsocks/local.py" |grep -v "grep" |wc -l`
 if [ $count -gt 0 ] 
 then
@@ -8,7 +10,7 @@ then
 	echo "Kill $pid"
         sudo kill $pid
     done
-    echo "The existing server.py has been killed. Restart now."
+    echo "The existing local.py has been killed. Restart now."
 fi
 
 
@@ -18,4 +20,9 @@ then
 else
     nohup python ./shadowsocksR/shadowsocks/local.py -c $1 >/dev/null 2>&1 &
 fi  
-echo "ShadowsocksR started."
+
+count=`ps -ef |grep "shadowsocks/local.py" |grep -v "grep" |wc -l`
+if [ $count -eq 1 ] 
+then
+    echo "ShadowsocksR started."
+fi

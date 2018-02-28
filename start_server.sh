@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd `dirname $0`
+
 count=`ps -ef |grep "shadowsocks/server.py" |grep -v "grep" |wc -l`
 if [ $count -gt 0 ] 
 then
@@ -17,4 +19,9 @@ then
 else
     nohup python ./shadowsocksR/shadowsocks/server.py -c $1 >/dev/null 2>&1 &
 fi  
-echo "ShadowsocksR started."
+
+count=`ps -ef |grep "shadowsocks/server.py" |grep -v "grep" |wc -l`
+if [ $count -eq 1 ] 
+then
+    echo "ShadowsocksR started."
+fi
