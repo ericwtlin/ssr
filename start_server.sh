@@ -15,9 +15,9 @@ fi
 
 if [ $# -eq 0 ]
 then
-    nohup python ./shadowsocksR/shadowsocks/server.py -c ./config.json >/var/log/shadowsocksr.server.log 2>&1 &
+    nohup python ./shadowsocksR/shadowsocks/server.py -c ./config.json >/tmp/shadowsocksr.server.log 2>&1 &
 else
-    nohup python ./shadowsocksR/shadowsocks/server.py -c $1 >/var/log/shadowsocksr.server.log 2>&1 &
+    nohup python ./shadowsocksR/shadowsocks/server.py -c $1 >/tmp/shadowsocksr.server.log 2>&1 &
 fi  
 
 count=`ps -ef |grep "shadowsocks/server.py" |grep -v "grep" |wc -l`
